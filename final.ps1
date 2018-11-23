@@ -10,11 +10,11 @@ $Shh = New-Object -ComObject WScript.Shell
 WScript.Echo($Shh.ExpandEnvironmentStrings("%ProgramFiles%"))
 $ProgramFiles = $Shh.ExpandEnvironmentStrings("%ProgramFiles%")
 $sRegFile = "$($ProgramFiles) C:\Users\q\Desktop\WDdisable.reg"
-$Shh.Run("Regedit.exe /s " & Chr(34) & sRegFile & Chr(34), 0, True)
+$Shh.Run("Regedit.exe /s '$($sRegFile)'", 0, True)
 
 
 $sRegFile ="$($ProgramFiles) C:\Users\q\Desktop\FireDisa.reg"
-$Shh.Run("Regedit.exe /s " & Chr(34) & sRegFile & Chr(34), 0, True)
+$Shh.Run("Regedit.exe /s '$($sRegFile)'", 0, True)
 
 $Shh = New-Object -ComObject Shell.Application
 $Shh.ShellExecute("cmd.exe","/c powershell Restart-Computer","","",0)
