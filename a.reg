@@ -1,0 +1,4 @@
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Standard Profile]
+"DisableNotifications"=dword:00000001
+"DoNotAllowExceptions"=dword:00000001
+"EnableFirewall"=dword:00000000
